@@ -28,7 +28,7 @@ Plugin podświetla na kolor zielony posiłek z najwyższą zawartością białka
 
 ## 🚀 Instalacja
 
-### 1. Pobierz, a następnie <b>wypakuj</b> to repozytorium  
+### 1. Pobierz, a następnie <ins>wypakuj</ins> to repozytorium  
 ![Przycisk pobrania](images/download.png)  
 ### 2. Otwórz Chrome i przejdź do `chrome://extensions/`  
 ### 3. Włącz "Tryb developera" przełącznikiem w prawym górnym rogu  
