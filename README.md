@@ -36,7 +36,7 @@ Plugin podświetla na kolor zielony posiłek z najwyższą zawartością białka
 ### 4. Kliknij "Załaduj rozpakowane" i wybierz katalog zawierający pliki rozszerzenia  
 ![Wybór odpowiedniego katalogu](images/catalog.png)  
 ### 5. Ikona rozszerzenia powinna pojawić się na pasku narzędzi przeglądarki (możę być schowana w menu rozwijanym przycisku rozszerzeń (puzzel))  
-Naciśnięcie ikony pozwala przejść do ustawień wtyczki
+Naciśnięcie ikony pozwala przejść do ustawień wtyczki  
 ![Ikona dodatku](images/extension.png)  
 
 ## 🍽️ Użytkowanie
