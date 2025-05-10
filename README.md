@@ -4,6 +4,8 @@
 
 ### Rozszerzenie do przeglądarki Chrome, które podświetla posiłki z najwyższą zawartością białka na stronie panel.kuchniavikinga.pl.
 
+Plugin podświetla na kolor zielony posiłek z najwyższą zawartością białka, natomiast na niebiesko posiłki, które zawierają x% (ustawiany przez użytkownika, domyślnie 90%) białka posiłku z jego najwyższą zawartością.
+
 ![Przykład działania](images/example.png)
 
 ## 📋 Spis treści
