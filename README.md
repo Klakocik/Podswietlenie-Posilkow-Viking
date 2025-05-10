@@ -49,12 +49,7 @@
 
 ![Strona ustawień](images/settings.png)
 
-## 📝 Uwagi
 
-Przed użyciem rozszerzenia należy utworzyć pliki ikon:
-- `images/icon16.png` (16x16 pikseli)
-- `images/icon48.png` (48x48 pikseli)
-- `images/icon128.png` (128x128 pikseli)
 
 ## 📄 Licencja
 
@@ -62,4 +57,4 @@ Ten projekt jest otwartoźródłowy.
 
 ---
 
-Stworzone z ❤️ dla społeczności Viking Kitchen 
+Stworzone z ❤️ dla społeczności Viking od Kuchni
