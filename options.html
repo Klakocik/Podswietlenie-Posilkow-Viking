@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Podświetlenie Posiłków Viking - Opcje</title>
+  <style>
+    :root {
+      --primary-color: #2e7d32;
+      --secondary-color: #1976d2;
+      --background-color: #f9f9f9;
+      --card-background: #ffffff;
+      --text-color: #333333;
+      --border-color: #e0e0e0;
+      --error-color: #d32f2f;
+      --success-color: #388e3c;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 0;
+      margin: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+      color: var(--primary-color);
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-top: 8px;
+    }
+    
+    .card {
+      background-color: var(--card-background);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+    
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: var(--text-color);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 10px;
+    }
+    
+    .option-group {
+      margin-bottom: 25px;
+    }
+    
+    .option-group:last-child {
+      margin-bottom: 0;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    
+    .input-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    input[type="number"] {
+      width: 70px;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    
+    input[type="number"]:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+    }
+    
+    .error-message {
+      color: var(--error-color);
+      font-size: 13px;
+      margin-top: 5px;
+      display: none;
+    }
+    
+    input[type="color"] {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background: none;
+    }
+    
+    .color-section {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .color-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .color-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border-color);
+      padding: 5px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .color-label {
+      margin-left: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .reset-colors-btn {
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+    
+    .reset-colors-btn:hover {
+      background-color: #1565c0;
+    }
+    
+    .reset-colors-btn:active {
+      transform: scale(0.98);
+    }
+    
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+    
+    button:hover {
+      background-color: #1b5e20;
+    }
+    
+    button:active {
+      transform: scale(0.98);
+    }
+    
+    button:disabled {
+      background-color: #9e9e9e;
+      cursor: not-allowed;
+    }
+    
+    .status {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .success {
+      background-color: rgba(56, 142, 60, 0.1);
+      color: var(--success-color);
+      border: 1px solid rgba(56, 142, 60, 0.2);
+    }
+    
+    .visible {
+      opacity: 1;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Podświetlenie Posiłków Viking</h1>
+      <div class="subtitle">Ustawienia podświetlania posiłków z wysoką zawartością białka</div>
+    </div>
+    
+    <div class="card">
+      <h2 class="card-title">Parametry podświetlania</h2>
+      
+      <div class="option-group">
+        <label for="percentageThreshold">Próg procentowy dla podświetlania białka:</label>
+        <div class="input-container">
+          <input type="number" id="percentageThreshold" min="0" max="100" value="90">
+          <span>%</span>
+        </div>
+        <div class="error-message" id="percentageError">Wartość musi być liczbą od 0 do 100</div>
+      </div>
+      
+      <div class="option-group">
+        <label>Kolory podświetlenia:</label>
+        <div class="color-section">
+          <div class="color-container">
+            <div class="color-box">
+              <input type="color" id="highestProteinColor" value="#4CAF50">
+              <span class="color-label">Najwyższa zawartość białka</span>
+            </div>
+            
+            <div class="color-box">
+              <input type="color" id="thresholdProteinColor" value="#2196F3">
+              <span class="color-label">Powyżej progu</span>
+            </div>
+          </div>
+          <button id="resetColors" class="reset-colors-btn">Przywróć domyślne kolory</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="button-container">
+      <button id="save">Zapisz ustawienia</button>
+    </div>
+    
+    <div id="status" class="status"></div>
+    
+    <div class="footer">
+      Podświetlenie Posiłków Viking v1.0
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html> 

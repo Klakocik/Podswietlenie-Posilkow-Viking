@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Podświetlenie Posiłków Viking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      width: 250px;
+    }
+    h1 {
+      font-size: 16px;
+      margin-top: 0;
+    }
+    .info {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: center;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Podświetlenie Posiłków Viking</h1>
+  
+  <div class="info">
+    Automatycznie podświetla posiłki z wysoką zawartością białka na panel.kuchniavikinga.pl.
+  </div>
+  
+  <div class="buttons">
+    <button id="options">Otwórz ustawienia</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 
