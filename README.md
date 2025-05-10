@@ -2,7 +2,7 @@
 
 [![Wersja](https://img.shields.io/badge/Wersja-1.0-brightgreen)](#) [![Licencja](https://img.shields.io/badge/Licencja-Open%20Source-blue)](#)
 
-> Rozszerzenie do przeglądarki Chrome, które podświetla posiłki z wysoką zawartością białka na stronie panel.kuchniavikinga.pl.
+### Rozszerzenie do przeglądarki Chrome, które podświetla posiłki z najwyższą zawartością białka na stronie panel.kuchniavikinga.pl.
 
 ![Przykład działania](images/example.png)
 
