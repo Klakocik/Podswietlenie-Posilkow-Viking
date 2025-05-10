@@ -26,14 +26,14 @@
 
 ## 🚀 Instalacja
 
-###1. Pobierz, a następnie **wypakuj** to repozytorium  
+### 1. Pobierz, a następnie **wypakuj** to repozytorium  
 ![Przycisk pobrania](images/download.png)  
-###2. Otwórz Chrome i przejdź do `chrome://extensions/`  
-###3. Włącz "Tryb developera" przełącznikiem w prawym górnym rogu  
+### 2. Otwórz Chrome i przejdź do `chrome://extensions/`  
+### 3. Włącz "Tryb developera" przełącznikiem w prawym górnym rogu  
 ![Tryb developera](images/dev.png)  
-###4. Kliknij "Załaduj rozpakowane" i wybierz katalog zawierający pliki rozszerzenia  
+### 4. Kliknij "Załaduj rozpakowane" i wybierz katalog zawierający pliki rozszerzenia  
 ![Wybór odpowiedniego katalogu](images/catalog.png)  
-###5. Ikona rozszerzenia powinna pojawić się na pasku narzędzi przeglądarki (możę być schowana w menu rozwijanym przycisku rozszerzeń (puzzel))  
+### 5. Ikona rozszerzenia powinna pojawić się na pasku narzędzi przeglądarki (możę być schowana w menu rozwijanym przycisku rozszerzeń (puzzel))  
 ![Ikona dodatku](images/extension.png)  
 
 ## 🍽️ Użytkowanie
