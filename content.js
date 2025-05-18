@@ -22,6 +22,13 @@ function extractProteinValue(text) {
   return match ? parseFloat(match[1]) : 0;
 }
 
+// Function to extract kcal value from text
+function extractKcalValue(text) {
+  // Match kcal value, e.g., '537kcal'
+  const match = text.match(/(\d+(?:\.\d+)?)kcal/i);
+  return match ? parseFloat(match[1]) : 0;
+}
+
 // Main function to highlight meals
 function highlightProteinMeals() {
   // Check if the drawer is open (fixed class name)
@@ -43,16 +50,46 @@ function highlightProteinMeals() {
   mealElements.forEach((mealElement) => {
     const nutritionItems = mealElement.querySelectorAll('.nutrition-summary__item');
     let proteinValue = 0;
+    let kcalValue = 0;
 
     nutritionItems.forEach((item) => {
       const text = item.textContent.trim();
+      // Ignore K/B items
+      if (text.startsWith('K/B:')) return;
       if (text.includes('B:') || text.includes('B.')) {
         proteinValue = extractProteinValue(text);
-        if (proteinValue > highestProtein) {
-          highestProtein = proteinValue;
-        }
+      }
+      if (text.toLowerCase().includes('kcal')) {
+        kcalValue = extractKcalValue(text);
       }
     });
+
+    // Add K/B after the fourth nutrition-summary__item if both values are present
+    if (nutritionItems.length >= 4 && kcalValue > 0 && proteinValue > 0) {
+      // Check if K/B already exists to avoid duplicates
+      let hasKB = false;
+      nutritionItems.forEach((item) => {
+        if (item.textContent.trim().startsWith('K/B:')) {
+          hasKB = true;
+        }
+      });
+      if (!hasKB) {
+        const kbDiv = document.createElement('div');
+        kbDiv.className = 'nutrition-summary__item';
+        kbDiv.textContent = `K/B: ${(kcalValue / proteinValue).toFixed(1)}`;
+        // Insert after the fourth item
+        if (nutritionItems[3].nextSibling) {
+          nutritionItems[3].parentNode.insertBefore(kbDiv, nutritionItems[3].nextSibling);
+        } else {
+          nutritionItems[3].parentNode.appendChild(kbDiv);
+        }
+      }
+    }
+
+    // Restore updating highestProtein
+    if (proteinValue > highestProtein) {
+      highestProtein = proteinValue;
+    }
 
     meals.push({
       element: mealElement,
