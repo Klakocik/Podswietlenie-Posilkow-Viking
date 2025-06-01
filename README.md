@@ -8,6 +8,12 @@ Plugin podświetla na kolor zielony posiłek z najwyższą zawartością białka
 
 ![Przykład działania](images/example.png)
 
+**Nowa funkcjonalność:**
+
+![Nowa funkcjonalność - Kcal na 1g białka](images/kcal_per_protein.png)
+
+Na powyższym screenie widoczna jest dodatkowa informacja "K/B: 16.5" oznaczająca ilość kcal przypadającą na 1g białka w danym posiłku.
+
 ## 📋 Spis treści
 
 - [Funkcje](#-funkcje)
@@ -25,6 +31,7 @@ Plugin podświetla na kolor zielony posiłek z najwyższą zawartością białka
 - ✅ Konfigurowalny próg procentowy (domyślnie: 90%)
 - ✅ Możliwość dostosowania kolorów podświetlenia
 - ✅ Szybkie przywracanie domyślnych ustawień kolorów
+- ✅ **Wyświetlanie ilości kcal przypadającej na 1g białka w danym posiłku** (np. "K/B: 16.5")
 
 ## 🚀 Instalacja
 
@@ -45,6 +52,7 @@ Naciśnięcie ikony pozwala przejść do ustawień wtyczki
 2. Rozszerzenie automatycznie podświetli posiłki na podstawie zawartości białka:
    - Posiłki z najwyższą zawartością białka będą podświetlone na zielono (domyślnie)
    - Posiłki z zawartością białka powyżej progu będą podświetlone na niebiesko (domyślnie)
+   - **Przy każdym posiłku wyświetlana jest informacja o ilości kcal przypadającej na 1g białka (K/B)**
 
 ## ⚙️ Konfiguracja
 
@@ -55,8 +63,6 @@ Naciśnięcie ikony pozwala przejść do ustawień wtyczki
 5. Kliknij "Zapisz ustawienia", aby zastosować zmiany
 
 ![Strona ustawień](images/settings.png)
-
-
 
 ## 📄 Licencja
 
