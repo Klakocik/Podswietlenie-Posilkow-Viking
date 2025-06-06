@@ -52,7 +52,7 @@ Naciśnięcie ikony pozwala przejść do ustawień wtyczki
 2. Rozszerzenie automatycznie podświetli posiłki na podstawie zawartości białka:
    - Posiłki z najwyższą zawartością białka będą podświetlone na zielono (domyślnie)
    - Posiłki z zawartością białka powyżej progu będą podświetlone na niebiesko (domyślnie)
-   - **Przy każdym posiłku wyświetlana jest informacja o ilości kcal przypadającej na 1g białka (K/B)**
+   - Przy każdym posiłku wyświetlana jest informacja o ilości kcal przypadającej na 1g białka (K/B)
 
 ## ⚙️ Konfiguracja
 
